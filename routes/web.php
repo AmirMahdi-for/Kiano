@@ -16,3 +16,30 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+//simple route
+Route::get('articel', function(){
+    return 'this is articel';
+});
+
+Route::get('art/{var}', function($var){
+    return $var;
+});
+
+//Simple Route Group:
+
+
+Route::prefix('admin')->group(function(){
+    Route::get('/post', function () {
+        return 'admin post';
+    });
+    Route::get('/art', function () {
+        return 'admin art';
+    });
+    Route::get('/digi', function () {
+        return 'admin digi';
+    });
+    Route::get('/user', function () {
+        return 'admin user';
+    });
+});

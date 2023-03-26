@@ -1,5 +1,5 @@
 <?php
-
+use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,7 +28,6 @@ Route::get('art/{var}', function($var){
 
 //Simple Route Group:
 
-
 Route::prefix('admin')->group(function(){
     Route::get('/post', function () {
         return 'admin post';
@@ -43,3 +42,8 @@ Route::prefix('admin')->group(function(){
         return 'admin user';
     });
 });
+
+
+// Route::get('/', function () {
+//     return Inertia::render("test");
+//  });

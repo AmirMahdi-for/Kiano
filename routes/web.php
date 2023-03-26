@@ -1,4 +1,6 @@
 <?php
+
+use App\Models\Articel;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 
@@ -47,3 +49,8 @@ Route::prefix('admin')->group(function(){
 // Route::get('/', function () {
 //     return Inertia::render("test");
 //  });
+
+Route::get('/model', function(){
+    $articels = Articel::all();
+    dd($articels);
+});

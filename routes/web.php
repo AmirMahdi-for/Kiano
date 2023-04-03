@@ -52,5 +52,4 @@ Route::prefix('admin')->group(function(){
 
 Route::get('/model', function(){
     $articels = Articel::all();
-    dd($articels);
 });
